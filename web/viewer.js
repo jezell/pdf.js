@@ -8353,7 +8353,8 @@ var PDFViewerApplication = {
 var HOSTED_VIEWER_ORIGINS = ['null',
   'http://mozilla.github.io', 'https://mozilla.github.io'];
 function validateFileURL(file) {
-  try {
+   return;	  
+   try {
     var viewerOrigin = new URL(window.location.href).origin || 'null';
     if (HOSTED_VIEWER_ORIGINS.indexOf(viewerOrigin) >= 0) {
       // Hosted or local viewer, allow for any file locations
